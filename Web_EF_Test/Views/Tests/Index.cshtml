@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Web_EF_Test.Models.Test>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.str)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.check)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.check2)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.str)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.check)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.check2)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.NUmber }) |
+            @Html.ActionLink("Details", "Details", new { id = item.NUmber }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.NUmber })
+        </td>
+    </tr>
+}
+
+</table>

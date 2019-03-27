@@ -1,0 +1,42 @@
+﻿@model Web_EF_Test.Models.Test
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Test</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.str)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.str)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.check)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.check)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.check2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.check2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NUmber }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
